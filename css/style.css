@@ -14,6 +14,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
 }
 
 .container {
@@ -40,10 +41,12 @@ body {
     border-radius: 10%;
     background-color: var(--primary-color-buttons);
     margin: 15px;
+    z-index: 2;
 }
 
 .menu-panel {
     position: absolute; /*ei ole kindlat positsiooni veebilehel. kui relative, siis on kindel*/
+    top: 0;
     right: -203px;
     width: 203px;
     height:357px;
@@ -54,6 +57,7 @@ body {
     padding-top: 32px;
     box-sizing: border-box; /*ei sale konteineril suurust muuta, kui lisatakse border-box*/
     transition: right 1s ease-in-out;
+    z-index: 1;
 }
 
 .menu-panel ul {
@@ -138,6 +142,7 @@ body {
 
  .page-menu {
     justify-self: end;
+    position: relative;
  }
 
  hr {
