@@ -42,6 +42,53 @@ body {
     margin: 15px;
 }
 
+.menu-panel {
+    position: absolute; /*ei ole kindlat positsiooni veebilehel. kui relative, siis on kindel*/
+    right: -203px;
+    width: 203px;
+    height:357px;
+    background-color: var(--primary-color-buttons);
+    font-size: 26px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 32px;
+    box-sizing: border-box; /*ei sale konteineril suurust muuta, kui lisatakse border-box*/
+    transition: right 1s ease-in-out;
+}
+
+.menu-panel ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-panel ul li {
+    margin-bottom: 32px;
+}
+
+.menu-panel ul li a {
+    color: var(--primary-color-text-dark);
+    text-decoration: none;
+}
+
+.menu-panel.active {
+    right: 0;
+}
+
+.close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: none;
+    border: var(--primary-color-headlines);
+    font-size: 18px;
+    cursor: pointer;
+    color: #555;
+  }
+
+  .close-button:hover {
+    color: rgb(199, 207, 80);
+  }
+
 .line {
     height: 5px;
     width: 39px;
