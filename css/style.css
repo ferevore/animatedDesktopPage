@@ -274,9 +274,9 @@ footer {
     border-radius: 10px;
     font-size: 20px;
     position: relative;
-    opacity: 0;
+    opacity: 32px;
     background-color: var(--primary-color-backround);
-    padding: 32px;
+    padding: 0;
     transform: scale(0.95); /* pisut väiksem alguses */
     transition: opacity 0.8s ease, transform 0.8s ease;
 }

@@ -6,7 +6,33 @@ const images = ['2.webp', '1-1.webp', '2-2.webp', '3-3.webp', '4-4.webp','5-5.we
 const modal = document.querySelector('.modal');
 const btnOpenModal = document.querySelector('#btn-open-form');
 const btnCloseModal = document.querySelector('#modal-close-button');
+const inputName = document.querySelector('#name');
+const inputEmail = document.querySelector('#email');
+const inputMessage = document.querySelector('#message');
+const contactForm = document.querySelector('#contact-form');
 
+contactForm.addEventListener('submit', (event)=> {
+    event.preventDefault();
+    const name = inputName.value;
+    const email = inputEmail.value;
+    const message = inputMessage.value;
+
+
+    //object literal = paindlik andmete struktuur, salvestab valued key-value formaadis
+
+    const formData = {
+        userName: name,
+        userEmail: email,
+        userMessage: message
+    }
+
+   // localStorage.setItem("formData", JSON.stringify(formData));
+   localStorage.setItem("name", JSON.stringify(formData.userName));
+   localStorage.setItem("email", JSON.stringify(formData.userEmail));
+   localStorage.setItem("message", JSON.stringify(formData.userMessage));
+
+    console.log('form submitted')
+});
 
 /*btnOpenModal.addEventListener('click', () => {
     modal.style.display = 'block';
